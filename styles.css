@@ -550,14 +550,8 @@ body {
 }
 
 @media only screen and (max-width: 360px) {
-    .hero,
-    .about-us,
-    .why-choose-us,
-    .products,
-    .final-cta-section {
-        padding: 0 0.75rem;
-    }
-    .hero h1 ,   .about-us h1 {
+  
+    .hero h1 , .about-us h1 {
         font-size: 1.5rem; 
     }
     .hero p , .about-us p {
