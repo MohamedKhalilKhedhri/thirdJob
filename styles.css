@@ -427,6 +427,9 @@ body {
 }
 
 @media only screen and (max-width: 768px) {
+    .navbar{
+        padding: 0.25rem 1rem;
+    }
     .hero{
         padding: 3rem 2rem;
         height: 80vh;
@@ -485,7 +488,7 @@ body {
         background: white; 
         border: 1px solid #ccc; 
         z-index: 1000; 
-        padding: 0.5rem 2rem;
+        padding: 0.5rem 0.25rem;
         
     }
     
@@ -493,7 +496,8 @@ body {
         display: block;
         width: 100%;
         text-align: center;
-        padding: 3px;
+        padding:4px 3px;
+        width: 200px;
     
     }
     .nav-item{
@@ -502,6 +506,7 @@ body {
 
     .nav-toggle {
         display: block; 
+        padding: 10px;
     }
 
     .nav-list.active {
