@@ -5,12 +5,11 @@
     list-style-type: none;
     text-decoration: none;
 }
+html {
+    scroll-behavior: smooth;
+  }
 body {
     font-family: "Cairo", sans-serif;
-}
-section {
-    padding-top: 60px; /* Adjust this value based on your header height */
-    margin-top: -60px; /* This ensures the section starts at the top */
 }
 
 /* navbar*/
@@ -44,7 +43,13 @@ section {
 .nav-item {
     margin-left: 2rem; /* Space between nav items */
 }
-
+.nav-toggle {
+    display: none;
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 .nav-link {
     text-decoration: none; /* Remove underline */
     color: #1e7d77; /* White text color */
@@ -76,13 +81,13 @@ section {
 }
 
 .hero h1 {
-    font-size: clamp(2rem, 5vw + 1rem, 5rem);
+    font-size: 3.35rem;
     margin-bottom: 20px;
     color:white;
 }
 
 .hero p {
-    font-size:clamp(0.75rem, 1.075rem, 1.5rem) ;
+    font-size: 1.25rem;
     margin-bottom: 30px;
     color:white; /* White text */
 }
@@ -92,12 +97,17 @@ section {
     color: white;
     padding: 15px 25px;
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border-radius: 5px;
-    transition: background-color 0.3s;
+    display: block; 
+    width:fit-content
+   
+ 
 
 }
-
+.cta-button:active{
+    transform: scale(0.95);
+}
 .cta-button:hover {
     background-color: white; /* Light Teal for hover effect */
     color: #1e7d77;
@@ -116,6 +126,7 @@ section {
     max-width: 100%;
     height: auto;
 }
+
 /*aboutus*/
 
 .about-us {
@@ -169,7 +180,7 @@ section {
 .card-container {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
     gap: 1rem; /* Space between cards */
 }
 
@@ -216,7 +227,7 @@ section {
 .product-grid {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
 }
 
@@ -255,13 +266,16 @@ section {
     justify-content: center;
     padding: 10px;
     gap: 20px;
+    
  
 }
 .product-card-content h3,.product-card-content p{
    color: white;
    text-align: center;
 }
-
+.product-card-content a{
+    transition: .2s ease;
+}
 .product-card:hover img {
     transform: scale(1.1);
 }
@@ -351,3 +365,228 @@ section {
 .footer-bottom {
     font-size: 0.8rem; /* Smaller font size for copyright */
 }
+#cta2 {
+	animation: pulse 2s infinite;
+    transition: .2s ease;
+}
+
+@keyframes pulse {
+	0% {
+		
+		box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+	}
+
+	70% {
+	
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+/*responsive design*/
+@keyframes slideIn {
+
+    from{
+        transform: translateX(-100%);
+    }
+    to{
+        transform: translateX(0);
+    }
+    
+}
+@keyframes slideOut {
+
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%); 
+    }
+    
+}
+@media only screen and (max-width: 1024px) {
+    .hero{
+        padding: 3rem;
+    }
+    .about-us,
+    .why-choose-us,
+    .products,
+    .final-cta-section {
+        padding: 0 3rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem; 
+    }
+  
+    .about-us h1 {
+        font-size: 2.2rem; 
+    }
+    .about-us p , .hero p{
+        font-size: 1.1rem; 
+    }
+    .why-choose-us h2 , .products h2  {
+        font-size: 2rem; 
+    }
+    
+    .final-cta-section h1 {
+        font-size: 1.8rem; 
+    }
+    .final-cta-section p {
+        font-size: 1rem; 
+    }
+    .about-us{
+        flex-direction: column;
+    }
+    .nav-list {
+        display: none; 
+        flex-direction: column;
+        position: absolute;
+        top: 4rem; 
+        left: 0;
+        background: white; 
+        border: 1px solid #ccc; 
+        z-index: 1000; 
+        width: 35%;
+        padding: 0.5rem 1rem;
+        
+    }
+    
+    .nav-link{
+        display: block;
+        width: 100%;
+        text-align: center;
+    
+    }
+
+    .nav-toggle {
+        display: block; 
+    }
+
+    .nav-list.active {
+        display: flex; 
+        
+    }
+    
+   
+}
+
+@media only screen and (max-width: 768px) {
+    .hero{
+        padding: 3rem 2rem;
+        height: 80vh;
+    }
+    .about-us,
+    .why-choose-us,
+    .products,
+    .final-cta-section {
+        padding: 0 2rem;
+    }
+    .hero h1, .about-us h1  {
+        font-size: 2rem; 
+    }
+    .hero p , .about-us p {
+        font-size: 1rem; 
+    }
+   
+    .why-choose-us h2 , .products h2 {
+        font-size: 1.8rem; 
+    }
+ 
+    .final-cta-section h1 {
+        font-size: 1.6rem; 
+    }
+    .final-cta-section p {
+        font-size: 0.9rem;
+    }
+    .hero-image{
+      display: none;
+    }
+    .hero-content{
+        max-width: 100%;
+    }
+    .nav-list{
+        width: 55%;
+    }
+    .contact-info{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer-nav{
+        flex-direction: column-reverse;
+        gap: 35px;
+    }
+    .footer-list{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .product-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 640px) {
+    .hero{
+        padding:3rem 1rem;
+        height: 70vh;
+    }
+    .about-us,
+    .why-choose-us,
+    .products,
+    .final-cta-section {
+        padding: 0 1rem;
+    }
+    .hero h1 , .about-us h1{
+        font-size: 1.8rem; 
+    }
+    .hero p , .about-us p {
+        font-size: 0.9rem; 
+    }
+    
+    .products h2 ,  .why-choose-us h2 {
+        font-size: 1.6rem; 
+    }
+    .final-cta-section h1 {
+        font-size: 1.4rem;
+    }
+    .final-cta-section p {
+        font-size: 0.9rem; 
+    }
+    .nav-list{
+        width: 65%;
+    }
+    .product-grid{
+       grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .hero,
+    .about-us,
+    .why-choose-us,
+    .products,
+    .final-cta-section {
+        padding: 0 0.75rem;
+    }
+    .hero h1 ,   .about-us h1 {
+        font-size: 1.5rem; 
+    }
+    .hero p , .about-us p {
+        font-size: 0.85rem; 
+    }
+    .why-choose-us h2 , .products h2 {
+        font-size: 1.4rem; 
+    }
+    .final-cta-section h1 {
+        font-size: 1.2rem; 
+    }
+    .final-cta-section p {
+        font-size: 0.75rem; 
+    }
+    .nav-list{
+        width: 75%;
+    }
+}
+

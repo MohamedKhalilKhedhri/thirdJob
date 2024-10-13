@@ -8,30 +8,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <title>Landing Page</title>
 </head>
 <body>
-  <nav class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar">
     <img src="assets/logo.avif" alt="شعار" class="logo">
-    <ul class="nav-list">
+    <button class="nav-toggle" id="nav-toggle">☰</button>
+    <ul class="nav-list slide-out" id="nav-list">
         <li class="nav-item"><a href="#about" class="nav-link">معلومات عنا</a></li>
-        <li class="nav-item"><a href="#features" class="nav-link">المميزات</a></li>
+        <li class="nav-item"><a href="#features" class="nav-link">لماذا تختارنا</a></li>
         <li class="nav-item"><a href="#products" class="nav-link">منتجاتنا</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link">تواصل معنا</a></li>
     </ul>
 </nav>
 
+<!-- HERO SECTION -->
 <section class="hero">
     <div class="hero-content">
-        <h1>مراقبة أمنية فعالة في كل مكان</h1>
-        <p>استمتع بالسلامة والأمان مع كاميرات المراقبة الأمنية الفعالة لدينا. نحن نقدم لك الحلول الأمنية الشاملة لمنزلك أو مشروعك التجاري.</p>
-        <a href="https://msadirksa.com/" target="_blank" rel="noopener noreferrer" class="cta-button">تسوق الآن</a>
+        <h1 id="hero-header">مراقبة أمنية فعالة في كل مكان</h1>
+        <p  id="hero-text">استمتع بالسلامة والأمان مع كاميرات المراقبة الأمنية الفعالة لدينا. نحن نقدم لك الحلول الأمنية الشاملة لمنزلك أو مشروعك التجاري.</p>
+        <a href="https://msadirksa.com/" target="_blank" rel="noopener noreferrer" id="cta" class="cta-button">تسوق الآن</a>
     </div>
     <div class="hero-image">
         <img src="assets/camera.png" alt="كاميرا أمان" id="hero-image" />
     </div>
 </section>
-
+<!-- ABOUT US -->
 <section id="about" class="about-us">
     <div class="about-text">
         <h1>مرحبًا بكم في مصادر التقنية الحديثة</h1>
@@ -39,12 +43,12 @@
         <p>نسعى جاهدين لتوفير منظومة تقنية متكاملة تلبي احتياجاتكم، ونتعاون مع علامات تجارية عالمية بارزة لنقدم لكم الأفضل دائمًا.</p>
     </div>
     <div class="about-image">
-        <img src="assets/about.jpg" alt="About Us" style="max-width: 500px;" />
+        <img src="assets/about.jpg" alt="About Us" id="about-image" style="max-width: 500px;" />
     </div>
 </section>
-
+<!-- Features Section -->
 <section id="features" class="why-choose-us">
-    <h2>لماذا تختارنا؟</h2>
+    <h2 class="featuresHeader">لماذا تختارنا؟</h2>
     <div class="card-container">
         <div class="card">
             <h3>منتجات عالية الجودة</h3>
@@ -69,8 +73,9 @@
     </div>
 </section>
 
+<!-- PRODUCTS CATEGORIES DISPLAY -->
 <section id="products" class="products">
-    <h2>منتجاتنا</h2>
+    <h2 class="productsHeader">منتجاتنا</h2>
     <div class="product-grid">
         <div class="product-card">
             <img src="assets/recorder.webp" alt="اجهزة التسجيل" />
@@ -123,17 +128,19 @@
     </div>
 </section>
 
-<section id="contact" class="final-cta-section">
+<!-- FINAL CTA : CALL TO ACTION BUTTON SECTION -->
+<section  class="final-cta-section">
     <h1>لا تفوت الفرصة!</h1>
     <p>قم بزيارة متجرنا الآن واستفد من أفضل العروض على المنتجات.</p>
-    <a href="https://msadirksa.com/" target="_blank" rel="noopener noreferrer" class="cta-button">تسوق الآن</a>
+    <a href="https://msadirksa.com/" target="_blank" rel="noopener noreferrer" id="cta2" class="cta-button">تسوق الآن</a>
 </section>
 
-<footer class="footer">
+<!-- FOOTER -->
+<footer id="contact" class="footer">
     <nav class="footer-nav">
         <ul class="footer-list">
             <li class="footer-item"><a href="#about" class="footer-link">معلومات عنا</a></li>
-            <li class="footer-item"><a href="#features" class="footer-link">المميزات</a></li>
+            <li class="footer-item"><a href="#features" class="footer-link">لماذا تختارنا</a></li>
             <li class="footer-item"><a href="#products" class="footer-link">منتجاتنا</a></li>
             <li class="footer-item"><a href="#contact" class="footer-link">تواصل معنا</a></li>
         </ul>
@@ -141,15 +148,37 @@
     </nav>
     <div class="contact-info">
         <h3>معلومات الاتصال</h3>
-        <p>البريد الإلكتروني: info@example.com</p>
-        <p>الهاتف: +966 123 456 789</p>
-        <p>العنوان: الرياض، المملكة العربية السعودية</p>
+        <p>البريد الإلكتروني: msadirsa@gmail.com</p>
+        <p>الهاتف: +966534305551 </p>
     </div>
     <div class="footer-bottom">
         <p>&copy; 2024 جميع الحقوق محفوظة</p>
     </div>
 </footer>
 
+<!-- SCRIPT -->
 <script src="scripts.js"></script>
+<script>
+    // scripts.js
+    const sr = ScrollReveal({
+        distance: '50px',
+        duration: 800,
+        delay: 200,
+        viewFactor: 0.4,
+    });
+
+    // Apply ScrollReveal to various sections
+    sr.reveal('#hero-header', { origin: 'right' });
+    sr.reveal('#hero-text', { origin: 'right', delay: 300 });
+    sr.reveal('#cta', { origin: 'right', delay: 400 });
+    sr.reveal('#hero-image, #about-image', { origin: 'right', scale: 0.9 });
+    sr.reveal('.about-text', { delay: 300 });
+    sr.reveal('.card-container .card', { interval: 100 });
+    sr.reveal('.product-card', { interval: 100 });
+
+    // Fade animation for features and products headers
+    sr.reveal('.featuresHeader, .productsHeader', { opacity: 0 , distance:"0px"});
+
+</script>
 </body>
 </html>
