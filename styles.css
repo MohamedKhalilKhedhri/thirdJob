@@ -364,10 +364,18 @@ body {
 .footer-bottom {
     font-size: 0.8rem; 
 }
+.whatsapp,.mailTo{
+    color: #333;
+    transition: .3 ease-out;
+}
+.whatsapp:hover , .mailTo:hover{
+    color: #1e7d77;
+}
 #cta2 {
 	animation: pulse 2s infinite;
     transition: .2s ease;
 }
+
 
 @keyframes pulse {
 	0% {
